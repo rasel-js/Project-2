@@ -2,8 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 /*** Global Tag ***/
@@ -24,6 +24,84 @@ h1 {
   font-size: 20px;
 }
 
+/* Flex CSS */
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.justify-content-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-content-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.justify-content-evenly {
+  -webkit-box-pack: evenly;
+      -ms-flex-pack: evenly;
+          justify-content: evenly;
+}
+
+.justify-content-space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.justify-content-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.align-items-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.align-items-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.align-items-stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.align-items-baseline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -35,7 +113,136 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-.header {
+.container, .container-fluid {
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.container .row, .container-fluid .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+  .col-xxl-1 {
+    width: 8.33333%;
+    padding: 0 15px;
+  }
+  .col-xxl-2 {
+    width: 16.66667%;
+    padding: 0 15px;
+  }
+  .col-xxl-3 {
+    width: 25%;
+    padding: 0 15px;
+  }
+  .col-xxl-4 {
+    width: 33.33333%;
+    padding: 0 15px;
+  }
+  .col-xxl-5 {
+    width: 41.66667%;
+    padding: 0 15px;
+  }
+  .col-xxl-6 {
+    width: 50%;
+    padding: 0 15px;
+  }
+  .col-xxl-7 {
+    width: 58.33333%;
+    padding: 0 15px;
+  }
+  .col-xxl-8 {
+    width: 66.66667%;
+    padding: 0 15px;
+  }
+  .col-xxl-9 {
+    width: 75%;
+    padding: 0 15px;
+  }
+  .col-xxl-10 {
+    width: 83.33333%;
+    padding: 0 15px;
+  }
+  .col-xxl-11 {
+    width: 91.66667%;
+    padding: 0 15px;
+  }
+  .col-xxl-12 {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+  .col-xl-1 {
+    width: 8.33333%;
+    padding: 0 15px;
+  }
+  .col-xl-2 {
+    width: 16.66667%;
+    padding: 0 15px;
+  }
+  .col-xl-3 {
+    width: 25%;
+    padding: 0 15px;
+  }
+  .col-xl-4 {
+    width: 33.33333%;
+    padding: 0 15px;
+  }
+  .col-xl-5 {
+    width: 41.66667%;
+    padding: 0 15px;
+  }
+  .col-xl-6 {
+    width: 50%;
+    padding: 0 15px;
+  }
+  .col-xl-7 {
+    width: 58.33333%;
+    padding: 0 15px;
+  }
+  .col-xl-8 {
+    width: 66.66667%;
+    padding: 0 15px;
+  }
+  .col-xl-9 {
+    width: 75%;
+    padding: 0 15px;
+  }
+  .col-xl-10 {
+    width: 83.33333%;
+    padding: 0 15px;
+  }
+  .col-xl-11 {
+    width: 91.66667%;
+    padding: 0 15px;
+  }
+  .col-xl-12 {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.logo a {
   display: inline-block;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  border: 1px solid #333;
+  padding: 15px 10px;
 }
 /*# sourceMappingURL=style.css.map */

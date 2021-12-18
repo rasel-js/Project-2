@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 /*** Global Tag ***/
@@ -18,4 +18,27 @@ ul {
 
 h1 {
     font-size: 20px;
+}
+
+/* Flex CSS */
+$flex: flex, inline-flex;
+@each $i in $flex {
+    .d-#{$i} {
+        display: $i;
+    }
+}
+
+$justify: start, center, end, evenly, space-around, space-between;
+@each $i in $justify {
+    .justify-content-#{$i} {
+        justify-content: $i;
+    } 
+}
+
+
+$align-items: start, center, end, stretch, baseline;
+@each $i in $align-items {
+    .align-items-#{$i} {
+        align-items: $i;
+    } 
 }
